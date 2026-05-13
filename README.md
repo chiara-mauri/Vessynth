@@ -1,9 +1,10 @@
 # VesSynth - A Robust Cross-Scale Cross-Modal 3D Vessel Segmentation Method
 
-This repo is under active development and can change without notice. Coming soon:
-- updated models
-- faster code for inference
-- integration into FreeSurfer!
+  Warning! This repo is under active development and can change without notice. Coming soon:
+   - updated models
+   - faster code for inference
+   - integration into FreeSurfer!
+----
 
 ![Projection of segmented vessels in ex vivo MRI, Optical Coherence Tomography and Hierarchical Phase-Contrast Tomography](vesselSegmentation.jpg)
 
