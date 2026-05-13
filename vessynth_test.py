@@ -86,22 +86,22 @@ if __name__ == "__main__":
     model_path = './models/'
     
     if modality == 'OCT':
-        model_to_load = glob.glob(model_path + 'weights/OCT_model37*')[0]
+        model_to_load = glob.glob(model_path + 'weights/OCT_model*')[0]
         json_path = os.path.join(model_path, f'segnet_model_OCT.json') #json file containing backbone info
     elif modality == 'T2star':
-        model_to_load = glob.glob(model_path + 'weights/T2star_model23*')[0]
+        model_to_load = glob.glob(model_path + 'weights/T2star_model*')[0]
         json_path = os.path.join(model_path, f'segnet_model_T2star.json')
     elif modality == 'TOF':
-        model_to_load = glob.glob(model_path + 'weights/TOF_model54v2*')[0]
+        model_to_load = glob.glob(model_path + 'weights/TOF_model*')[0]
         json_path = os.path.join(model_path, f'segnet_model_TOF.json')
     elif modality == 'HiPCT':
-        model_to_load = glob.glob(model_path + 'weights/HiPCT_model50*')[0]
+        model_to_load = glob.glob(model_path + 'weights/HiPCT_model*')[0]
         json_path = os.path.join(model_path, f'segnet_model_HiPCT.json')
     elif modality == 'fibers':    
-        model_to_load = glob.glob(model_path + 'weights/axons_model3*')[0]
+        model_to_load = glob.glob(model_path + 'weights/axons_model*')[0]
         json_path = os.path.join(model_path, f'segnet_model_fibers.json')
     elif modality == 'LSFM':
-        model_to_load = glob.glob(model_path + 'weights/LSFM_model13*')[0]
+        model_to_load = glob.glob(model_path + 'weights/LSFM_model*')[0]
         json_path = os.path.join(model_path, f'segnet_model_LSFM.json')        
     else:
         raise ValueError('Modality not recognized. Allowed: OCT, T2star, HiPCT, TOF, fibers.')
