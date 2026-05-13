@@ -1,5 +1,5 @@
 # VesSynth - A Robust Cross-Scale Cross-Modal 3D Vessel Segmentation Method
-
+----
   Warning! This repo is under active development and can change without notice. Coming soon:
    - updated models
    - faster code for inference
@@ -51,9 +51,9 @@ python path/to/repo/vessynth_test.py -i <vol> -o <outputDir> -mod <modality> [-t
 ```
 
 where the required arguments are:
-- ```<vol>``` is input nifti volume to segment. 
-- ```<outputDir>``` is output directory where segmentations are saved
-- ```<modality>``` indicates the modality/contrast of the input volume. Accepted values are
+- ```<vol>```: input nifti volume to segment. 
+- ```<outputDir>```: output directory where segmentations are saved
+- ```<modality>```: modality/contrast of the input volume. Accepted values are
    - 'T2star': for exvivo MRI and all T2star-based contrasts. Vessels are both bright and dark. Mesoscopic resolution (100-400um)
    - 'HiPCT': for Hierarchical Phase-Contrast Tomography. Dark vessels. Resolution ~ 20-30um
    -  'OCT': for Optical Coherence Tomography. Dark vessels. Resolution ~ 20um
@@ -62,7 +62,7 @@ where the required arguments are:
    - 'pvs': for perivascular spaces (coming soon!)
 
 optional arguments are:
-- ```<threshold>``` value used to threshold the 'vessel probablity' to obtain a hard segmentation. default is 0.3.
-- ```<mask_vol>``` a binary mask applied to the segmentation (e.g. 1 inside brain, 0 outside). Useful to remove noise outside brain
+- ```<threshold>``` value used to threshold the 'vessel probablity' to obtain a hard segmentation. Default is 0.3.
+- ```<mask_vol>``` a binary mask applied to the segmentation (e.g. 1 inside brain, 0 outside). Useful to remove noise outside brain. A whole-brain mask can be obtained with (mri_synthstrip)[https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/]
 - ```<cutout>``` a bounding box to identify ROI (```-zc x1 x2 y1 y2 z1 z2```)
 - ```-nw```, ```--no_weights``` do NOT use Gaussian weights when computing segmentation on a patch
