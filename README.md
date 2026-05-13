@@ -1,5 +1,10 @@
 # VesSynth - A Robust Cross-Scale Cross-Modal 3D Vessel Segmentation Method
 
+This repo is under active development and can change without notice. Coming soon:
+- updated models
+- faster code for inference
+- integration into FreeSurfer!
+
 ![Projection of segmented vessels in ex vivo MRI, Optical Coherence Tomography and Hierarchical Phase-Contrast Tomography](vesselSegmentation.jpg)
 
 ## Installation
@@ -48,14 +53,15 @@ where the required arguments are:
 - ```<vol>``` is input nifti volume to segment. 
 - ```<outputDir>``` is output directory where segmentations are saved
 - ```<modality>``` indicates the modality/contrast of the input volume. Accepted values are
-   - 'T2star': for exvivo MRI and all T2star-based contrasts. Vessels are both bright and dark. Mesoscopic resolution (100-300um)
+   - 'T2star': for exvivo MRI and all T2star-based contrasts. Vessels are both bright and dark. Mesoscopic resolution (100-400um)
    - 'HiPCT': for Hierarchical Phase-Contrast Tomography. Dark vessels. Resolution ~ 20-30um
    -  'OCT': for Optical Coherence Tomography. Dark vessels. Resolution ~ 20um
    -  'TOF': for in vivo Time-Of-Flight Magnetic Resonance angiography. Bright vessels. Flexible resolution, from ~150um iso to 500um x 500um x 1mm
    -  'fibers': for bright fiber bundles/axons across modalities (experimental)
+   - 'pvs': for perivascular spaces (coming soon!)
 
 optional arguments are:
-- ```<threshold>``` value used to threshold the 'vessel probablity' to obtain a hard segmentation. default is 0.3. Value reccommended for TOF = 0.5
+- ```<threshold>``` value used to threshold the 'vessel probablity' to obtain a hard segmentation. default is 0.3.
 - ```<mask_vol>``` a binary mask applied to the segmentation (e.g. 1 inside brain, 0 outside). Useful to remove noise outside brain
 - ```<cutout>``` a bounding box to identify ROI (```-zc x1 x2 y1 y2 z1 z2```)
 - ```-nw```, ```--no_weights``` do NOT use Gaussian weights when computing segmentation on a patch
