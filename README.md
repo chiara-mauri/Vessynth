@@ -66,3 +66,7 @@ optional arguments are:
 - ```<mask_vol>``` a binary mask applied to the segmentation (e.g. 1 inside brain, 0 outside). Useful to remove noise outside brain. A whole-brain mask can be obtained with [mri_synthstrip](https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/)
 - ```<cutout>``` a bounding box to identify ROI (```-zc x1 x2 y1 y2 z1 z2```)
 - ```-nw```, ```--no_weights``` do NOT use Gaussian weights when computing segmentation on a patch
+
+## Synthesis pipeline
+
+Synthetic training data for VesSynth (vessels and intensity images) have been generated using [synthspline](https://github.com/balbasty/synthspline)
