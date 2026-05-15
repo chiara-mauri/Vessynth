@@ -54,7 +54,7 @@ where the required arguments are:
 - ```<vol>```: input nifti volume to segment
 - ```<outputDir>```: output directory where segmentations are saved
 - ```<modality>```: modality/contrast of the input volume. Accepted values are
-   - 'T2star': for exvivo MRI and all T2star-based contrasts. Vessels are both bright and dark. Mesoscopic resolution (100-400um)
+   - 'T2star': for exvivo MRI and all T2star-based contrasts (including SWI, QSM,...). Vessels can be both bright and dark. Mesoscopic resolution (100-400um)
    - 'HiPCT': for Hierarchical Phase-Contrast Tomography. Dark vessels. Resolution ~ 20-30um
    -  'OCT': for Optical Coherence Tomography. Dark vessels. Resolution ~ 20um
    -  'TOF': for in vivo Time-Of-Flight Magnetic Resonance angiography. Bright vessels. Flexible resolution, from ~150um iso to 500um x 500um x 1mm
