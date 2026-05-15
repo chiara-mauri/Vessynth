@@ -69,4 +69,4 @@ optional arguments are:
 
 ## Synthesis pipeline
 
-Synthetic training data for VesSynth (vessels and intensity images) have been generated using [synthspline](https://github.com/balbasty/synthspline)
+Synthetic data for training VesSynth (vessels and intensity images) have been generated using [synthspline](https://github.com/balbasty/synthspline)
